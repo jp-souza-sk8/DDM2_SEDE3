@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conversor de Texto para Caixa Alta</title>
+    </head>
+    <body>
+
+        <h2 style="text-align: center;">Conversor de caixa alta</h2>
+
+        <input type="text" id="inputText" placeholder="Digite um texto">
+        <button onclick="converterTexto()">Converter para Caixa Alta</button>
+        <div id="resultado"></div>
+
+        <script>
+            function converterTexto() {
+                // Obtém o texto do input
+                var texto = document.getElementById("inputText").value;
+
+                // Chama a função para converter o texto para caixa alta
+                var textoEmCaixaAlta = converterParaCaixaAlta(texto);
+
+                // Exibe o resultado na div com id "resultado"
+                document.getElementById("resultado").innerText = textoEmCaixaAlta;
+            }
+
+            function converterParaCaixaAlta(str) {
+                return str.toUpperCase(); // Converte todas as letras para caixa alta
+            }
+        </script>
+    </body>
+</html>

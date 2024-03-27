@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exemplo de Evento onchange</title>
+    </head>
+    <body>
+
+        <label for="numero">Digite um número:</label>
+        <input type="number" id="numero">
+
+        <p>O dobro do número digitado será exibido aqui:</p>
+        <p id="resultado"></p>
+
+        <script>
+            // Obtém o elemento de entrada
+            var inputNumero = document.getElementById("numero");
+
+            // Adiciona um ouvinte de evento para o evento onchange
+            inputNumero.addEventListener("change", function() {
+                // Quando o valor do campo de entrada mudar, esta função será chamada
+
+                // Obtém o valor do campo de entrada e converte para número
+                var valor = parseFloat(inputNumero.value);
+
+                // Calcula o dobro do número
+                var dobro = valor * 2;
+
+                // Obtém o elemento de resultado
+                var resultadoElement = document.getElementById("resultado");
+
+                // Define o texto do resultado para o dobro do número
+                resultadoElement.textContent = "O dobro do número digitado é: " + dobro;
+            });
+        </script>
+    </body>
+</html>

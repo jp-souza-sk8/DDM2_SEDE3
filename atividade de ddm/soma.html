@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Soma de Números</title>
+    </head>
+    <body>
+
+        <h2 style="text-align: center;">Soma</h2>
+
+        <p>Digite dois números para somar:</p>
+        <input type="number" id="num1" placeholder="Número 1">
+        <input type="number" id="num2" placeholder="Número 2">
+        <button onclick="realizarSoma()">Somar</button>
+        <div id="resultado"></div>
+
+        <script>
+            function realizarSoma() {
+                // Obtém os valores dos números
+                var num1 = parseFloat(document.getElementById("num1").value);
+                var num2 = parseFloat(document.getElementById("num2").value);
+
+                // Chama a função para realizar a soma
+                var resultado = somarNumeros(num1, num2);
+
+                // Exibe o resultado na div com id "resultado"
+                document.getElementById("resultado").innerText = "Resultado: " + resultado;
+            }
+
+            function somarNumeros(num1, num2) {
+                return num1 + num2; // Retorna a soma dos números
+            }
+        </script>
+
+    </body>
+</html>

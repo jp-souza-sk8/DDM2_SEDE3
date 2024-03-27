@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Neste exemplo, temos uma função nomeada mostrarMensagem em JavaScript. Quando o botão é clicado, essa função é chamada. Dentro da função, obtemos o elemento HTML com o id "mensagem" e atualizamos seu conteúdo com um texto indicando que o botão foi clicado.</p>
+
+    <h3>função: nomeada</h3>
+    <button onclick="mostrarMensagem()">Clique aqui</button>
+    <p id="mensagem1"></p> <br><br>
+
+    <script>
+        //--------------- FUNÇÃO->Nomeada ---------------
+        function mostrarMensagem() {
+            var elemento = document.getElementById("mensagem1");
+            elemento.innerHTML = "O botão foi clicado!";
+        }
+    </script>
+</body>
+</html>
+

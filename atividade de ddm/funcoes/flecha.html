@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exemplo de função de flecha</title>
+</head>
+<body>
+
+<p>Neste exemplo, a função de flecha alterarTexto é definida para alterar o texto do elemento de parágrafo com o id "mensagem". Em seguida, um evento de clique é adicionado ao botão HTML com o id "botao", que chama a função alterarTexto quando o botão é clicado.</p>
+
+<p id="mensagem">Clique no botão para mudar o texto.</p>
+<button id="botao">Clique Aqui</button>
+
+<script>
+// Definindo a função de flecha
+const alterarTexto = () => {
+  const mensagem = document.getElementById('mensagem');
+  mensagem.textContent = 'Texto alterado pela função de flecha!';
+};
+
+// Adicionando um evento de clique ao botão
+document.getElementById('botao').addEventListener('click', alterarTexto);
+</script>
+
+</body>
+</html>

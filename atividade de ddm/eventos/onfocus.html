@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>evento: onfocus</h3>
+    <input type="text" id="meuInput" placeholder="Digite aqui">
+    <p id="mensagem"></p> <br>
+
+    <script>
+         //--------------- ONFOCUS ---------------
+        // Selecionar o input
+        var meuInput = document.getElementById('meuInput');
+        var mensagem = document.getElementById('mensagem');
+
+        // Adicionar um event listener para o evento onfocus
+        meuInput.addEventListener('focus', function() {
+            mensagem.textContent = 'O campo está em foco.';
+        });
+
+        // Adicionar um event listener para o evento onblur (perda de foco)
+        meuInput.addEventListener('blur', function() {
+            mensagem.textContent = ''; // Limpar a mensagem quando o campo perde o foco
+        });
+    </script>
+</body>
+</html>

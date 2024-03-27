@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>exemplo de função com construtor</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+    <p>Neste exemplo, temos uma função construtora Pessoa que cria objetos com propriedades nome e idade. Além disso, a função possui um método mostrarDados que exibe os dados da pessoa no elemento HTML com o id output. Quando o botão é clicado, um novo objeto Pessoa é criado e seus dados são exibidos na página.</p>
+
+    <h1>Constructor Function Example</h1>
+    <button id="createButton">Criar Novo Objeto</button>
+    <div id="output"></div>
+
+    <script>
+        // Definindo a função construtora
+        function Pessoa(nome, idade) {
+            this.nome = nome;
+            this.idade = idade;
+
+            // Método para exibir os dados da pessoa no HTML
+            this.mostrarDados = function() {
+                document.getElementById('output').innerHTML = 'Nome: ' + this.nome + ', Idade: ' + this.idade;
+            }
+        }
+
+        // Evento para criar um novo objeto Pessoa quando o botão for clicado
+        document.getElementById('createButton').addEventListener('click', function() {
+            var nome = prompt('Digite o nome da pessoa:');
+            var idade = parseInt(prompt('Digite a idade da pessoa:'));
+
+            // Criando um novo objeto Pessoa
+            var pessoa = new Pessoa(nome, idade);
+
+            // Chamando o método para mostrar os dados da pessoa
+            pessoa.mostrarDados();
+        });
+    </script>
+</body>
+</html>

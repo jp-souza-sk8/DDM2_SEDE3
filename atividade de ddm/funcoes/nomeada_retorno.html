@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Neste exemplo, temos uma função nomeada chamada saudacao, que recebe um parâmetro nome. A função obtém um elemento HTML com o ID "mensagem" e, se encontrado, cria uma mensagem de saudação com base no nome fornecido. Em seguida, atualiza o conteúdo desse elemento com a mensagem de saudação. <br>
+    No HTML, há um botão que, quando clicado, chama a função saudacao com o parâmetro "Usuário". Ao clicar no botão, a saudação será exibida na página.
+    </p>
+
+    <h3>função: nomeada com parametro e retorno</h3>
+    <div id="mensagem2"></div>
+    <button onclick="saudacao('Usuário')">Clique aqui para ser saudado!</button> <br><br>
+
+    <script> 
+    //--------------- FUNÇÃO->Função Nomeada com argumento(parametro) e retorno; ---------------
+        // Definindo a função nomeada
+        function saudacao(nome) {
+            // Obtendo o elemento HTML com o ID 'mensagem'
+            var elemento = document.getElementById('mensagem2');
+
+            // Verificando se o elemento existe
+            if (elemento) {
+                // Criando a mensagem de saudação
+                var mensagem = 'Olá, ' + nome + '! Bem-vindo(a) ao nosso site!';
+
+                // Atualizando o conteúdo do elemento HTML com a mensagem
+                elemento.innerHTML = mensagem;
+            } else {
+                console.error('Elemento HTML com ID "mensagem" não encontrado.');
+            }
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exemplo de Interação JS/HTML</title>
+<style>
+    #myDiv {
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+    }
+</style>
+</head>
+<body>
+
+<p>Neste exemplo, quando o botão "Mudar Cor" é clicado, a função `changeColor` é chamada. Esta função seleciona uma cor aleatória do array `colors` e então altera a cor de fundo do elemento `<div>` com o ID "myDiv" para essa cor aleatória.</p>
+
+<div id="myDiv"></div>
+<button onclick="changeColor()">Mudar Cor</button>
+
+<script>
+    function changeColor() {
+        // Array de cores
+        var colors = ["red", "blue", "green", "orange", "purple", "pink", "cyan"];
+
+        // Seleciona uma cor aleatória
+        var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+        // Obtém a referência ao elemento <div>
+        var divElement = document.getElementById("myDiv");
+
+        // Muda a cor de fundo do elemento <div>
+        divElement.style.backgroundColor = randomColor;
+    }
+</script>
+
+</body>
+</html>
